@@ -4,7 +4,7 @@ Invoke-WebRequest https://chocolatey.org/install.ps1 -UseBasicParsing | Invoke-E
 #>
 
 #Restart shell once you run above and comment it out, continue script below
-
+#test
 mkdir c:\git
 mkdir c:\git\personal
 mkdir c:\git\collab
