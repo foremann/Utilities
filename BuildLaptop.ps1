@@ -10,6 +10,7 @@ mkdir c:\git\personal
 mkdir c:\git\collab
 mkdir c:\scripts
 mkdir c:\temp
+mkdir c:\vagrant
 
 choco install firefox -y
 #choco install mremoteng -y not working currently
