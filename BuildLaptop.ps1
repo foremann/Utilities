@@ -24,6 +24,7 @@ choco install wireshark -y
 choco install putty -y
 choco install 7zip -y
 choco install visualstudiocode -y
+choco install vagrant -y
 
 
 #Install AD
