@@ -4,7 +4,8 @@ Invoke-WebRequest https://chocolatey.org/install.ps1 -UseBasicParsing | Invoke-E
 #>
 
 #Restart shell once you run above and comment it out, continue script below
-#test
+
+
 mkdir c:\git
 mkdir c:\git\personal
 mkdir c:\git\collab
@@ -12,6 +13,10 @@ mkdir c:\scripts
 mkdir c:\temp
 mkdir c:\vagrant
 
+#Install NuGet for DSC
+Install-PackageProvider -Name NuGet -Force
+
+#Install chocolatey packages
 choco install firefox -y
 #choco install mremoteng -y not working currently
 choco install javaruntime -y
@@ -25,6 +30,7 @@ choco install putty -y
 choco install 7zip -y
 choco install visualstudiocode -y
 choco install vagrant -y
+choco install packer -y
 
 
 #Install AD
@@ -120,7 +126,16 @@ else{Write-Host "Cortana was not disabled successfully" -ForegroundColor Red -Ba
 
 
 
+
 #Manually install office, skype, onedrive, powershell pspki module, sql 2016
 #Once git is setup copy down repos
 #Copy down ISO files for virtualbox
 #Import bookmarks
+
+<# Vagrant setup
+Open admin shell
+cd c:\vagrant
+vagrant init 
+vagrant box add jacqinthebox/windowsserver2016
+
+#>
